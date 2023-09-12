@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 16:47:43 by uclement          #+#    #+#             */
-/*   Updated: 2023/09/04 16:49:44 by uclement         ###   ########.fr       */
+/*   Updated: 2023/09/12 15:38:37 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,15 +68,15 @@ static char	*ft_cut(char const *s, int i, char c)
 		return (NULL);
 	while (s[i] != c && s[i])
 	{
-		if (s[i] == '\''  || s[i] == '\"')
-			{
-				i++;
-				while (s[i] != '\'' && s[i] != '\"')
-					str[k++] = s[i++];
-				str[k] = ' ';
-				k++;
-				break ;
-			}
+		if (s[i] == '\'' || s[i] == '\"')
+		{
+			i++;
+			while (s[i] != '\'' && s[i] != '\"')
+				str[k++] = s[i++];
+			str[k] = ' ';
+			k++;
+			break ;
+		}
 		str[k++] = s[i++];
 	}
 	str[k] = '\0';

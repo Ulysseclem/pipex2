@@ -32,7 +32,7 @@ INCS        := include    \
 SRC_DIR     := src
 SRCS        := main.c \
 				split.c \
-				utils.c
+				utils.c \
 
 SRCS        := $(SRCS:%=$(SRC_DIR)/%)
 BUILD_DIR   := .build

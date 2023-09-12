@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:43:36 by uclement          #+#    #+#             */
-/*   Updated: 2023/09/04 15:31:35 by uclement         ###   ########.fr       */
+/*   Updated: 2023/09/11 19:08:47 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,7 @@ static int	ft_size(char const *s, char c)
 
 	i = 0;
 	while (s[i] != c && s[i])
-	{
-		if (s[i] == '\'')
-		{
-			i++;
-			while (s[i] != '\'')
-				i++;
-		}
 		i++;
-	}
 	return (i);
 }
 
@@ -44,15 +36,7 @@ static int	ft_count(char const *s, char c)
 		if (s[i] != '\0')
 			j++;
 		while (s[i] != '\0' && s[i] != c)
-		{
-			if (s[i] == '\'')
-			{
-				i++;
-				while (s[i] != '\'')
-					i++;
-			}
 			i++;
-		}
 	}
 	return (j);
 }
@@ -68,15 +52,6 @@ static char	*ft_cut(char const *s, int i, char c)
 		return (NULL);
 	while (s[i] != c && s[i])
 	{
-		if (s[i] == '\'')
-			{
-				while (s[i] != '\'')
-				{
-					str[k] = s[i];
-					k++;
-					i++;
-				}
-			}
 		str[k] = s[i];
 		k++;
 		i++;
@@ -121,6 +96,6 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	str[j] = NULL;
+	str[j] = 0;
 	return (str);
 }
