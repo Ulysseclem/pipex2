@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 15:56:00 by uclement          #+#    #+#             */
-/*   Updated: 2023/09/12 18:41:28 by uclement         ###   ########.fr       */
+/*   Updated: 2023/09/14 20:14:15 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 char	**ft_split_pipex(char const *s, char c);
 void	process(char **av, int f1, int f2, char **ev);
 void	free_lst(char **str);
-void	msg_error(char *err1, char *err, int nb);
+void	msg_error(char *err1, char *err, int i);
 char	*cmd_maker(char **ev, char **args);
 char	*pathfinder(char **ev);
 

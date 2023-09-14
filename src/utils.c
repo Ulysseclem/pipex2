@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:06:25 by uclement          #+#    #+#             */
-/*   Updated: 2023/09/12 18:42:39 by uclement         ###   ########.fr       */
+/*   Updated: 2023/09/14 20:14:05 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	free_lst(char **str)
 	free(str);
 }
 
-void	msg_error(char *err1, char *err, int nb)
+void	msg_error(char *err1, char *err, int i)
 {
 	if (err1 != NULL)
 	{
@@ -79,6 +79,6 @@ void	msg_error(char *err1, char *err, int nb)
 	}
 	write(2, err, ft_strlen(err));
 	write(2, "\n", 1);
-	if (nb < 0)
-		exit(nb);
+	if (i == 0)
+		exit(0);
 }
